@@ -1,0 +1,1 @@
+Pada sesi kali ini, saya akan melakukan instalasi dan konfigurasi Oracle 19c Grid Infrastructure for a standalone server (Oracle Restart). Tujuannya adalah untuk menjalankan database pada server tunggal sekaligus mempelajari dependency management, khususnya dalam mengelola siklus hidup resource seperti Oracle ASM, Listener, dan Database.
