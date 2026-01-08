@@ -223,6 +223,55 @@ hal yang dipersiapkan:
 
 38. membuat database menggunakan utility database configuration assistent(DBCA)
 
+    <img width="995" height="787" alt="Screenshot (718)" src="https://github.com/user-attachments/assets/77b68168-928a-4dc2-8bb4-d3afc1915006" />
+    <img width="999" height="779" alt="Screenshot (721)" src="https://github.com/user-attachments/assets/3d69fc8c-1afc-4a0a-9c6d-1bd808695f4e" />
+    <img width="999" height="777" alt="Screenshot (722)" src="https://github.com/user-attachments/assets/8578d7b8-8231-44dc-84f4-044d5da4e7d9" />
+    <img width="992" height="780" alt="Screenshot (723)" src="https://github.com/user-attachments/assets/9bc0235a-4d27-4996-bd06-b96ec2450a65" />
+    <img width="993" height="769" alt="Screenshot (724)" src="https://github.com/user-attachments/assets/d93e4a2f-9e70-43d8-8dcc-17db1c4a7a8f" />
+    <img width="991" height="785" alt="Screenshot (725)" src="https://github.com/user-attachments/assets/80be1a88-973d-4325-a29a-22b47885bed5" />
+    <img width="1002" height="782" alt="Screenshot (726)" src="https://github.com/user-attachments/assets/c58a4c37-3ae2-4365-93fc-b20aca215d66" />
+    <img width="1004" height="793" alt="Screenshot (727)" src="https://github.com/user-attachments/assets/0e7cde58-98de-4b7b-a8d7-c474e65f4afb" />
+    <img width="988" height="775" alt="Screenshot (729)" src="https://github.com/user-attachments/assets/aa3f1a12-d211-417a-b50d-78a6b92d717f" />
+    <img width="999" height="790" alt="Screenshot (730)" src="https://github.com/user-attachments/assets/144224b3-2594-4d0d-bee1-bfc14021c34a" />
+    <img width="997" height="791" alt="Screenshot (731)" src="https://github.com/user-attachments/assets/0ed9ba28-e41d-402d-a633-117e23f49d98" />
+    <img width="992" height="790" alt="Screenshot (732)" src="https://github.com/user-attachments/assets/4e6df0cf-df19-4951-ae0f-0c04d5a1f435" />
+    <img width="995" height="781" alt="Screenshot (735)" src="https://github.com/user-attachments/assets/418c2743-7104-4e69-8ee8-d16571249abf" />
+
+
+39. Verifikasi Lokasi Alert Log, Diagnostic Destination, dan Parameter File (PFILE/SPFILE).
+
+    <img width="870" height="412" alt="Screenshot (762)" src="https://github.com/user-attachments/assets/e1b8bda3-3b17-4033-b3c7-8e72b2a29246" />
+    <img width="872" height="496" alt="Screenshot (760)" src="https://github.com/user-attachments/assets/541cb599-9152-4283-aaa8-8be9ce66d9e9" />
+    <img width="783" height="148" alt="Screenshot (761)" src="https://github.com/user-attachments/assets/07d794e4-8670-4031-b70b-c5b06d347ae7" />
+    - diagnostic_dest adalah "pintu masuk" utama untuk semua aktivitas monitoring dan troubleshooting database Oracle.
+
+
+
+40. Verifikasi status database.
+        
+    <img width="780" height="682" alt="Screenshot (763)" src="https://github.com/user-attachments/assets/828e08c1-f1c2-4ea0-afa6-81afa18a900d" />
+
+
+
+41. verifikasi database resource. memastikan database terdaftar di dalam grid infrastucture.
+
+    <img width="851" height="619" alt="Screenshot (738)" src="https://github.com/user-attachments/assets/36e6248b-86d3-4903-aa32-8eafd910d8d4" />
+
+
+42. Verifikasi Komprehensif Resource Oracle Restart (Listener, Database, dan ASM)
+
+    <img width="674" height="369" alt="Screenshot (740)" src="https://github.com/user-attachments/assets/d094abbe-236e-4a3d-831f-06f5efa696ee" />
+    <img width="959" height="676" alt="Screenshot (741)" src="https://github.com/user-attachments/assets/bef250f1-049b-4e44-b951-3d78da998a6f" />
+    <img width="1179" height="353" alt="Screenshot (764)" src="https://github.com/user-attachments/assets/973c80dd-45d6-4b25-b1e7-c7c4d96feb73" />
+
+
+
+
+ 
+
+
+
+
     
 
 
