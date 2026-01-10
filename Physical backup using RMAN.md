@@ -65,7 +65,7 @@ kelebihan RMAN:
 10. Melakukan recovery database secara otomatis menggunakan Data Recovery Advisor (DRA) untuk mengembalikan status database ke kondisi normal.
     
     <img width="1153" height="796" alt="Screenshot (780)" src="https://github.com/user-attachments/assets/ed38f652-76a8-4ff8-84ac-258ed49f73b4" />
-    - list failure : menampilkan kegagalan system yang terjadi karena loss critical file
+    - list failure : menampilkan kegagalan system yang terjadi karena loss of critical file
     
     <img width="1126" height="763" alt="Screenshot (781)" src="https://github.com/user-attachments/assets/2635dad9-0617-4d79-ba90-dcf3f4bd8e75" />
     - advise failure : memberikan solusi yang direkomendasikan oleh Oracle kepada user
