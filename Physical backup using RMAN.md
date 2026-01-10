@@ -1,4 +1,4 @@
-Pada sesi kali ini, saya akan melakukan proses physical backup pada Oracle Database menggunakan native tool yaitu Recovery Manager (RMAN).
+Pada sesi kali ini, saya akan melakukan proses physical backup pada Oracle Database menggunakan native tool yaitu Recovery Manager (RMAN). Simulasi ini mencakup Loss of Critical files pada arsitektur ASM untuk menguji ketahanan sistem, dilanjutkan dengan proses automasi disaster recovery menggunakan fitur Data Recovery Advisor untuk meminimalkan Downtime dan menjamin Data Integrity.
 
 kelebihan RMAN:
 - support hot backup
