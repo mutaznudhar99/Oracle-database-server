@@ -9,7 +9,14 @@ kelebihan RAC:
 kekurangan RAC:
 - Mempertimbangkan performa interconnect overhead karena keterbatasan penggunaan RAM server
 
+hal yang dipersiapkan:
+- 1 server untuk node 1
+- 1 server untuk node 2 
+- adapter network public dan private untuk mengkoneksikan antar server dan RAC antar server
 
 
 
-1. 
+
+1. Set konfigurasi memori server pada virtual machine
+
+   
