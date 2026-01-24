@@ -301,13 +301,20 @@ hal yang dipersiapkan:
     <img width="1571" height="544" alt="Screenshot (980)" src="https://github.com/user-attachments/assets/f221abd8-36b0-4da1-9475-6c81f927186e" />
 
 
-48. Cek status voting disk pada kedua server. memastikan kedua server mengakses disk ASM yang sama.
+45. Cek status voting disk pada kedua server. memastikan kedua server mengakses disk ASM yang sama.
 
     <img width="658" height="153" alt="Screenshot (984)" src="https://github.com/user-attachments/assets/f717b0f0-0a7a-4cf7-b45b-8d2f50ac7e38" />
     <img width="664" height="122" alt="Screenshot (993)" src="https://github.com/user-attachments/assets/31f4fe98-9d12-44e5-9c05-2e92888c77d8" />
 
 
-45. Memastikan RAC berjalan pada kedua server dengan membuat table sample pada server node 1 kemudian cek pada node 2 untuk verifikasi.
+46. Cek status resources cluster pada kedua server. memastikan resource cluster racdb keduanya berjalan "STABLE"
+
+    <img width="802" height="433" alt="Screenshot (988)" src="https://github.com/user-attachments/assets/9cde0190-f401-4447-9ed7-6ae5fda4f90f" />
+    <img width="822" height="882" alt="Screenshot (989)" src="https://github.com/user-attachments/assets/e19e529e-eb08-44b1-8829-5eca390bad4a" />
+
+
+
+47. Memastikan RAC berjalan pada kedua server dengan membuat table sample pada server node 1 kemudian cek pada node 2 untuk verifikasi.
 
     <img width="813" height="389" alt="Screenshot (981)" src="https://github.com/user-attachments/assets/9edf872d-62c3-4ba6-a5af-bbeb579df3be" />
     <img width="790" height="303" alt="Screenshot (982)" src="https://github.com/user-attachments/assets/9fa6b5d4-71e1-4919-ac19-9bd0d2e51476" />
