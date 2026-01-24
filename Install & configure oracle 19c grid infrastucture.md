@@ -17,7 +17,7 @@ hal yang dipersiapkan:
    <img width="930" height="409" alt="Screenshot (633)" src="https://github.com/user-attachments/assets/523bd327-dcfa-4f5b-90af-57350ba85049" />
 
 
-2. Melakukan konfigurasi Name Resolution lokal dengan menginput IP server ke dalam file /etc/hosts. Hal ini bertujuan agar saat instalasi Oracle Grid Infrastructure, sistem dapat mengenali nama server (hostname) dan memetakannya ke alamat IP secara tepat.
+2. Melakukan konfigurasi Name Resolution lokal dengan menginput IP server ke dalam file /etc/hosts. Hal ini bertujuan agar saat instalasi Oracle Grid Infrastructure, sistem dapat mengenali nama server (hostname).
 
    <img width="815" height="173" alt="Screenshot (631)" src="https://github.com/user-attachments/assets/e73763c6-a820-4ae4-b200-4a0b1d494f0b" />
 
@@ -27,7 +27,7 @@ hal yang dipersiapkan:
    <img width="758" height="139" alt="Screenshot (746)" src="https://github.com/user-attachments/assets/75de8953-146e-43c8-adbd-be73206726d9" />
 
    
-4. Melakukan verifikasi konfigurasi file /etc/hosts untuk memastikan bahwa mekanisme name resolution lokal sudah berfungsi.
+4. Melakukan verifikasi konfigurasi file /etc/hosts untuk memastikan mekanisme name resolution lokal sudah berfungsi.
 
    <img width="942" height="215" alt="Screenshot (747)" src="https://github.com/user-attachments/assets/16c3550d-c896-4ad6-8072-298daa6d0c6e" />
    - icmp_seq, ttl, time : mekanisme name resolution local berfungsi dengan baik
@@ -44,7 +44,7 @@ hal yang dipersiapkan:
    - parameter kernel secara default sudah sesuai dengan persyataran minimum instalasi oracle 19c
 
 
-7. add grup sistem baru yang diperlukan oleh Oracle
+7. add grup sistem baru yang diperlukan oleh oracle dan grid infrastucture.
 
    <img width="723" height="87" alt="Screenshot (635)" src="https://github.com/user-attachments/assets/cc22f08b-ca1c-423c-adc2-7976ee03196c" />
 
