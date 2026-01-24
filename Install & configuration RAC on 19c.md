@@ -100,7 +100,171 @@ hal yang dipersiapkan:
     <img width="888" height="184" alt="Screenshot (901)" src="https://github.com/user-attachments/assets/2e34248e-a51b-408a-a57d-07b91e234a1f" />
 
 
-15. 
+15. Disable konfigurasi namserver dan set konfigurasi nsswitch.conf ke hostname
+
+    <img width="379" height="64" alt="Screenshot (995)" src="https://github.com/user-attachments/assets/856d4315-714e-4623-b7b2-abfa053685c6" />
+    <img width="377" height="75" alt="Screenshot (902)" src="https://github.com/user-attachments/assets/06e53072-fd5f-4b84-b7e5-a199b395036c" />
+
+
+16. Create Chrony NTP di kedua server
+
+    <img width="1241" height="208" alt="Screenshot (925)" src="https://github.com/user-attachments/assets/b977fbbe-904c-4160-b89a-34678ec3c701" />
+
+
+17. Konfigurasi file.vmx di kedua server pada level virtual machine untuk mengaktifkan shared storage tanpa locking
+
+    <img width="1244" height="768" alt="Screenshot (904)" src="https://github.com/user-attachments/assets/7a0ce2b3-be80-4f02-b413-29426b0881a9" />
+
+
+18. Set disks dan size untuk ASM di kedua server.
+
+    <img width="391" height="592" alt="Screenshot (905)" src="https://github.com/user-attachments/assets/83e9445a-467b-4362-9445-3293cc2a0ceb" />
+    <img width="370" height="582" alt="Screenshot (906)" src="https://github.com/user-attachments/assets/3005aab8-bddb-4dd4-aa3e-02e33bb07433" />
+
+
+19. Validasi disk tambahan sudah terkonfigurasi di level os server
+
+    <img width="518" height="266" alt="Screenshot (907)" src="https://github.com/user-attachments/assets/b85425db-0bab-4c74-b4ff-2726498aafc4" />
+
+
+20. Partisi disks dan validasi disk sudah terpartisi di kedua server
+
+    <img width="703" height="538" alt="Screenshot (908)" src="https://github.com/user-attachments/assets/e5f17da5-f320-4bf1-9a9b-1af14c04a139" />
+    <img width="523" height="346" alt="Screenshot (909)" src="https://github.com/user-attachments/assets/9c7ca8bb-f864-4adc-bf32-614bad929ad4" />
+
+
+21. Mencari nama ssid disk untuk membuat konfigurasi udev rules di kedua server
+
+    <img width="592" height="160" alt="Screenshot (910)" src="https://github.com/user-attachments/assets/907417dc-7ed2-4be0-b73b-173450db1e70" />
+
+
+22. Set name ssid disk ke dalam udev rules di kedua server
+    - vi /etc/udev/rules.d/99-oracle-asmdevices.rules
+
+      <img width="1607" height="251" alt="Screenshot (911)" src="https://github.com/user-attachments/assets/073fdfae-5ddf-4c8f-b457-13c6aee0724b" />
+
+
+23. Reload dan trigger konfigurasi udev rules agar berjalan di kedua server
+
+    <img width="604" height="70" alt="Screenshot (912)" src="https://github.com/user-attachments/assets/731474f5-70ed-4bea-8316-f098f9d33011" />
+
+
+24. Validasi status udev rules 
+
+    <img width="656" height="272" alt="Screenshot (913)" src="https://github.com/user-attachments/assets/d8c3532e-446d-4d60-b11c-3d6e7ef260c9" />
+
+
+25. Konfigurasi shared memory di kedua server
+    - vi /etc/fstab
+
+      <img width="941" height="297" alt="Screenshot (914)" src="https://github.com/user-attachments/assets/56a40822-38b5-4545-a20e-52959006cf32" />
+
+
+26. Konfigruasi shared folder di server node 1 untuk bisa mengakses file software grid dan oracle pada host desktop
+
+    <img width="853" height="453" alt="Screenshot (915)" src="https://github.com/user-attachments/assets/d1eb97bd-bf12-492c-b6de-dda172204722" />
+
+
+27. Create direktori baru sesuaikan dengan nama file shared folder kemudian mount direktori untuk memunculkan file di level os server node 1
+
+    <img width="987" height="201" alt="Screenshot (916)" src="https://github.com/user-attachments/assets/170d4866-bea6-4e83-a743-921d26333ed4" />
+
+
+28. Copy file software grid dan oracle ke dalam masih-masing direktori Home di server node 1
+
+    <img width="987" height="201" alt="Screenshot (916)" src="https://github.com/user-attachments/assets/1cfc1d8f-0b32-43bb-9b0d-d90ad6bba197" />
+
+
+29. Validasi keberadaan file software di direktori HOME grid dan oracle
+
+    <img width="734" height="225" alt="Screenshot (918)" src="https://github.com/user-attachments/assets/90d3f0f1-fcb4-4cdc-990a-faf080dfd6e6" />
+
+
+30. Unzip file software grid di server node 1 dan validasi new direktori dengan berbagai macam file software grid
+
+    <img width="728" height="180" alt="Screenshot (919)" src="https://github.com/user-attachments/assets/f28e5d68-a522-400d-bf65-484fdb4088e0" />
+    <img width="603" height="214" alt="Screenshot (920)" src="https://github.com/user-attachments/assets/04dabdc2-00b5-4c61-ab99-6bd32439af99" />
+
+
+31. Set CVUqdisk mengkoneksikan CVU dengan Disk ASM on server node 1
+
+    <img width="791" height="129" alt="Screenshot (921)" src="https://github.com/user-attachments/assets/1cf3f179-4f9f-4cff-ad30-fdb572d86d65" />
+
+
+32. Membuat SSH secara menual untuk mengintegrasikan instalasi grid infrastcuture dan menjalankan fitur RAC di kedua server
+
+    <img width="610" height="160" alt="Screenshot (922)" src="https://github.com/user-attachments/assets/f652c1c0-c390-4abe-a41d-45535a58c090" />
+
+
+33. Validasi SSH berjalan dengan mencoba akses ssh dan name DNS node 2
+
+    <img width="952" height="498" alt="Screenshot (923)" src="https://github.com/user-attachments/assets/a9afdf8d-c08f-407b-a47c-946a18902fab" />
+
+
+34. Verifikasi konfigurasi untuk instalasi grid sudah sesuai atau belum, sebelum menginstall grid
+
+    <img width="917" height="96" alt="Screenshot (924)" src="https://github.com/user-attachments/assets/31ae688d-0306-46af-81c2-89adfaa20369" />
+
+
+35. Install grid setup
+
+    <img width="627" height="112" alt="Screenshot (928)" src="https://github.com/user-attachments/assets/95ca65bd-0499-49dd-ae0d-f4199ae69215" />
+    <img width="985" height="910" alt="Screenshot (929)" src="https://github.com/user-attachments/assets/fe3fe3d7-e508-4570-a56a-88e9c5c4cfb1" />
+    <img width="991" height="800" alt="Screenshot (930)" src="https://github.com/user-attachments/assets/64413599-defb-4dd0-ad01-1acc7c4f89cc" />
+    <img width="1003" height="785" alt="Screenshot (931)" src="https://github.com/user-attachments/assets/db2e9e59-6f5b-4478-8dd7-ded7a875f2b5" />
+    <img width="1005" height="767" alt="Screenshot (932)" src="https://github.com/user-attachments/assets/0ed149c5-55e7-4d02-9426-81695d23fb59" />
+    <img width="997" height="763" alt="Screenshot (933)" src="https://github.com/user-attachments/assets/6ef8ae99-fe9b-40fd-86e2-7196935bd262" />
+    <img width="1003" height="780" alt="Screenshot (934)" src="https://github.com/user-attachments/assets/836745cd-7cd9-48d6-b392-3a2a1e72f4f6" />
+    <img width="1008" height="774" alt="Screenshot (935)" src="https://github.com/user-attachments/assets/d628e841-21b6-456d-907c-f9c717c67d47" />
+    <img width="989" height="779" alt="Screenshot (936)" src="https://github.com/user-attachments/assets/d66becbf-df88-4a21-8d6b-884ce4279031" />
+    <img width="997" height="787" alt="Screenshot (937)" src="https://github.com/user-attachments/assets/deabf063-7d8c-4286-a69b-2abf033ef38f" />
+    <img width="996" height="775" alt="Screenshot (938)" src="https://github.com/user-attachments/assets/9c1e3698-31d3-4f44-a7d0-f96f5329889b" />
+    <img width="990" height="777" alt="Screenshot (939)" src="https://github.com/user-attachments/assets/ce46c9cb-6f98-4273-ac7c-642a919ce60b" />
+    <img width="1001" height="785" alt="Screenshot (940)" src="https://github.com/user-attachments/assets/b547d992-a1ff-402c-896d-dd655cef072e" />
+    <img width="989" height="759" alt="Screenshot (941)" src="https://github.com/user-attachments/assets/a43c039d-9781-4d04-a511-7b7da29c1670" />
+    <img width="993" height="772" alt="Screenshot (942)" src="https://github.com/user-attachments/assets/7f5ec0fa-b86b-401a-bade-10fb84af7bc1" />
+    <img width="1003" height="779" alt="Screenshot (943)" src="https://github.com/user-attachments/assets/45a05257-5f9a-4751-8cc3-c3f168532ffb" />
+    <img width="984" height="787" alt="Screenshot (944)" src="https://github.com/user-attachments/assets/fa163d4d-70f9-4a6f-b086-7f9650d90066" />
+    <img width="713" height="388" alt="Screenshot (945)" src="https://github.com/user-attachments/assets/b4c82c9b-e404-444d-8b2c-db77c6dc007f" />
+    <img width="998" height="793" alt="Screenshot (946)" src="https://github.com/user-attachments/assets/4a5c1704-61d0-4ca0-a1c5-e3c76846c4ae" />
+
+
+36. Validasi bahwa instalasi grid RAC sudah berjalan di kedua server
+
+    <img width="815" height="445" alt="Screenshot (947)" src="https://github.com/user-attachments/assets/97658b7b-a397-4882-b56d-efd0cba6d2bc" />
+    <img width="783" height="776" alt="Screenshot (948)" src="https://github.com/user-attachments/assets/c2bea8a2-884c-4dcf-80a7-6e6295a1bdd9" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
 
 
 
