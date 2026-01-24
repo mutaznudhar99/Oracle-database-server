@@ -235,6 +235,95 @@ hal yang dipersiapkan:
     <img width="783" height="776" alt="Screenshot (948)" src="https://github.com/user-attachments/assets/c2bea8a2-884c-4dcf-80a7-6e6295a1bdd9" />
 
 
+37. Konfigurasi ASM menggunakan configuration assistent
+
+    <img width="614" height="78" alt="Screenshot (950)" src="https://github.com/user-attachments/assets/65769836-ad5d-4971-99ce-e78a123c4ff9" />
+    <img width="1188" height="782" alt="Screenshot (951)" src="https://github.com/user-attachments/assets/2c673618-f1cb-4f67-986f-4a474efd3cca" />
+
+
+38. Validasi ASM sudah berjalan di kedua server
+
+    <img width="1554" height="252" alt="Screenshot (983)" src="https://github.com/user-attachments/assets/4c169865-a70a-487a-9355-b327ecd96765" />
+
+
+39. Unzip file software oracle dan validasi file software oracle
+
+    <img width="699" height="201" alt="Screenshot (952)" src="https://github.com/user-attachments/assets/ce023635-b080-49b5-acec-fb171eb37e39" />
+    <img width="638" height="242" alt="Screenshot (953)" src="https://github.com/user-attachments/assets/c488ec86-3ba8-4604-9db0-3d5506b13a1a" />
+
+
+40. Install software oracle 19c
+
+    <img width="616" height="110" alt="Screenshot (954)" src="https://github.com/user-attachments/assets/020ed036-1184-4c19-823f-ef9ef3cd2a95" />
+    <img width="996" height="786" alt="Screenshot (955)" src="https://github.com/user-attachments/assets/b06bb43f-bebe-4192-8e41-1425db3347be" />
+    <img width="993" height="783" alt="Screenshot (956)" src="https://github.com/user-attachments/assets/5ea60f96-1a72-4b61-84ab-e09e1ac532a6" />
+    <img width="991" height="775" alt="Screenshot (957)" src="https://github.com/user-attachments/assets/1d857fa5-6b83-4591-b9e5-7bbcfc681ef9" />
+    <img width="999" height="794" alt="Screenshot (958)" src="https://github.com/user-attachments/assets/9c137937-548b-4fed-994a-bb43a7afbffc" />
+    <img width="993" height="781" alt="Screenshot (959)" src="https://github.com/user-attachments/assets/6aa7cb5e-e38c-427f-8a1f-bd074df96380" />
+    <img width="996" height="795" alt="Screenshot (960)" src="https://github.com/user-attachments/assets/53de1c9c-1612-4cea-92b5-906dd719b5c9" />
+    <img width="993" height="789" alt="Screenshot (961)" src="https://github.com/user-attachments/assets/0c4b4c63-746f-45fd-8222-64d3878e678e" />
+    <img width="1003" height="789" alt="Screenshot (962)" src="https://github.com/user-attachments/assets/d1a0a1f3-1fcd-4f88-9d60-0dd69f8d06ed" />
+    <img width="699" height="369" alt="Screenshot (963)" src="https://github.com/user-attachments/assets/6e91d7d6-6e13-43f9-855e-6df12810e186" />
+    <img width="1004" height="772" alt="Screenshot (964)" src="https://github.com/user-attachments/assets/1b1e6e3f-ee53-42ea-a9b2-c153b29b6f2f" />
+
+
+41. Create database menggunakan database configuration assistent
+
+    <img width="604" height="69" alt="Screenshot (965)" src="https://github.com/user-attachments/assets/b9c4403c-05fd-4681-a987-b073195f0a76" />
+    <img width="1017" height="782" alt="Screenshot (966)" src="https://github.com/user-attachments/assets/6fa934b9-554c-412b-8aae-96824bb72da5" />
+    <img width="994" height="798" alt="Screenshot (967)" src="https://github.com/user-attachments/assets/107645f5-c66b-46ab-a1a5-41c063475e25" />
+    <img width="1005" height="787" alt="Screenshot (968)" src="https://github.com/user-attachments/assets/adf0521b-1e7d-4b7a-847b-ddaf79fbc09d" />
+    <img width="983" height="787" alt="Screenshot (969)" src="https://github.com/user-attachments/assets/e93e361f-2787-4ade-ad6e-33635048d920" />
+    <img width="998" height="780" alt="Screenshot (971)" src="https://github.com/user-attachments/assets/ff060100-5a78-48b8-8f47-cf70b5642d12" />
+    <img width="992" height="776" alt="Screenshot (972)" src="https://github.com/user-attachments/assets/0bee0116-551c-4d16-8bcb-fcadcac2f65e" />
+    <img width="996" height="777" alt="Screenshot (973)" src="https://github.com/user-attachments/assets/a579353d-fdfd-4466-a935-64d3bc3636e6" />
+    <img width="984" height="774" alt="Screenshot (974)" src="https://github.com/user-attachments/assets/1759460e-bdf4-41c8-b6f7-e3b0e827318b" />
+    <img width="998" height="778" alt="Screenshot (975)" src="https://github.com/user-attachments/assets/a4ec4e25-fb8e-4095-b7d6-c3fc2e10c578" />
+    <img width="986" height="782" alt="Screenshot (976)" src="https://github.com/user-attachments/assets/9cf14b1b-a020-47ac-91e3-35f47446c2d8" />
+    <img width="991" height="766" alt="Screenshot (977)" src="https://github.com/user-attachments/assets/07c57a38-8f41-491e-8e73-1ec6c9426148" />
+    <img width="992" height="780" alt="Screenshot (978)" src="https://github.com/user-attachments/assets/67f89e35-743c-48e5-b73e-c5c75113adbe" />
+
+
+42. Cek status konfigurasi database
+
+    <img width="611" height="606" alt="Screenshot (992)" src="https://github.com/user-attachments/assets/49b3895f-8f8f-4111-8435-470931709dfb" />
+
+
+43. Cek status clusterware pada kedua server. memastikan clusterware berjalan.
+
+    <img width="545" height="174" alt="Screenshot (986)" src="https://github.com/user-attachments/assets/02428f78-c132-4c02-a27a-b159ed464a33" />
+    <img width="571" height="128" alt="Screenshot (987)" src="https://github.com/user-attachments/assets/cf980ca8-8b83-4e7f-b714-b6053893d032" />
+
+
+44. Validasi status database dan RAC di antara kedua node server sudah berjalan
+
+    <img width="1267" height="293" alt="Screenshot (979)" src="https://github.com/user-attachments/assets/959a823e-4df4-44e1-9a0a-b5d3884f9b53" />
+    <img width="1571" height="544" alt="Screenshot (980)" src="https://github.com/user-attachments/assets/f221abd8-36b0-4da1-9475-6c81f927186e" />
+
+
+48. Cek status voting disk pada kedua server. memastikan kedua server mengakses disk ASM yang sama.
+
+    <img width="658" height="153" alt="Screenshot (984)" src="https://github.com/user-attachments/assets/f717b0f0-0a7a-4cf7-b45b-8d2f50ac7e38" />
+    <img width="664" height="122" alt="Screenshot (993)" src="https://github.com/user-attachments/assets/31f4fe98-9d12-44e5-9c05-2e92888c77d8" />
+
+
+45. Memastikan RAC berjalan pada kedua server dengan membuat table sample pada server node 1 kemudian cek pada node 2 untuk verifikasi.
+
+    <img width="813" height="389" alt="Screenshot (981)" src="https://github.com/user-attachments/assets/9edf872d-62c3-4ba6-a5af-bbeb579df3be" />
+    <img width="790" height="303" alt="Screenshot (982)" src="https://github.com/user-attachments/assets/9fa6b5d4-71e1-4919-ac19-9bd0d2e51476" />
+
+
+
+
+
+
+    
+    
+    
+
+
+
+
 
 
 
