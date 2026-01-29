@@ -1,6 +1,6 @@
 Pada sesi kali ini, saya akan mensimulasikan pembuatan user operasional beserta database profile user sebagai control access, security, dan performa database.
 
-tujuannya:
+tujuan:
 - Mengatur keamanan
 - Mengatur pengunaan resources
 - Mencegah access user mencurigakan
