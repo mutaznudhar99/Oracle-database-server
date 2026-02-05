@@ -167,7 +167,19 @@ Hal yang dipersiapkan:
     <img width="690" height="458" alt="Screenshot (1109)" src="https://github.com/user-attachments/assets/4fa00327-f620-414e-9d09-8cff554857b6" />
 
 
-29. 
+29. Create standby database service untuk mendaftarkan database standby ke dalam Oracle Grid Infrastructure (Oracle Clusterware).
+
+    <img width="566" height="143" alt="Screenshot (1116)" src="https://github.com/user-attachments/assets/f2522ab2-bacd-409b-a720-d9c6a739b56e" />
+    - db : nama unik database standby
+    - o : lokasi direcroti oracle software
+    - p : lokasi PFILE database standby
+    - r : role database standby
+    - s : start option
+    - n : nama database
+
+
+30. Verifikasi konfigurasi database standby dan modifikasi nama database instance 
+
 
 
 
