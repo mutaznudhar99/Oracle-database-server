@@ -152,6 +152,29 @@ Hal yang dipersiapkan:
     <img width="804" height="765" alt="Screenshot (1104)" src="https://github.com/user-attachments/assets/6b167cea-f082-4c30-b9e2-c2b5088b9352" />
 
 
+26. Melakukan verifikasi direktori backup di server standby untuk memastikan seluruh backupset yang diperlukan (full backup data, archivelog, dan controlfile) tersedia dan siap digunakan sebelum proses restorasi/duplikasi database
+
+    <img width="731" height="304" alt="Screenshot (1106)" src="https://github.com/user-attachments/assets/536a1216-9cf7-4aff-b37e-b6519361127b" />
+
+
+27. Restore dan duplikasi database standby menggunakan utilitas RMAN
+
+    <img width="784" height="876" alt="Screenshot (1108)" src="https://github.com/user-attachments/assets/305ed8fe-0d67-4deb-a74e-5fe5d62c702a" />
+
+
+28. Recover database untuk mengambil semua file backup yang ada di disk
+
+    <img width="690" height="458" alt="Screenshot (1109)" src="https://github.com/user-attachments/assets/4fa00327-f620-414e-9d09-8cff554857b6" />
+
+
+29. 
+
+
+
+
+    
+
+
     
 
 
