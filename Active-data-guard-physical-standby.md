@@ -12,17 +12,17 @@ Hal yang dipersiapkan:
 
 
 
-1. Memastikan service database dan listener berjalan di server primary dan standby sebagai jalan utama untuk menjalankan active data guard
+1. Memastikan resource database dan listener sudah berjalan dan terdaftar di bawah manajemen oracle restart/grid infrastucture pada server primary dan standby
 
    <img width="1599" height="879" alt="Screenshot (1057)" src="https://github.com/user-attachments/assets/095f59e6-6ce4-4197-bd37-17cdc1cba728" />
 
 
-2. Memastikan ip dan hostname server primary dan standby di masing-masing library server /etc/hosts untuk mengkoneksikan antar server
+2. Konfigurasi network IP address dan hostname di file /etc/hosts pada server (Primary & Standby) untuk memastikan resolusi nama server dapat dilakukan
 
    <img width="789" height="125" alt="Screenshot (1062)" src="https://github.com/user-attachments/assets/94685cd2-d752-4c52-b7de-2f39e68e27dd" />
 
 
-3. Testing ip hostname menggunakan tnsping/ping untuk memverifikasi server sudah saling mengenal
+3. Verifikasi konektifitas network dengan ping (layer network)
 
    <img width="849" height="318" alt="Screenshot (1063)" src="https://github.com/user-attachments/assets/0b6689e2-b7da-4916-99d1-5ac4859b03ea" />
 
@@ -178,7 +178,88 @@ Hal yang dipersiapkan:
     - n : nama database
 
 
-30. Verifikasi konfigurasi database standby dan modifikasi nama database instance 
+30. Verifikasi konfigurasi database standby dan modifikasi nama instance yang disesuaikan dengan database instance primary
+
+    <img width="655" height="726" alt="Screenshot (1117)" src="https://github.com/user-attachments/assets/1fc55ecb-0cf7-4a02-8720-7b55428274cf" />
+
+
+31. Melakukan startup pada database standby dan memverifikasi background process oracle (PMON) telah berjalan di level OS dengan nama instance yang sesuai
+
+    <img width="726" height="180" alt="Screenshot (1120)" src="https://github.com/user-attachments/assets/7b408694-b2c3-44c1-bfde-ceef1692024c" />
+    <img width="727" height="83" alt="Screenshot (1058)" src="https://github.com/user-attachments/assets/fd6f48e4-2c5c-4fa8-acd0-948c43cb4f44" />
+
+
+32. Verifikasi Konektivitas antar database menggunakan tnsping (layer aplikasi)
+
+    <img width="1600" height="526" alt="Screenshot (1121)" src="https://github.com/user-attachments/assets/e81a62ca-7faf-43d7-9bd4-4af2b94cc96e" />
+
+
+33. Melakukan duplikasi dan rename password file ke server standby untuk memastikan otentifikasi SYS tetap identik sebagai user administrasi Data Guard Broker 
+
+    <img width="1232" height="328" alt="Screenshot (1122)" src="https://github.com/user-attachments/assets/b7203687-7870-47da-900f-a9fd8c2de5df" />
+
+
+34. Verifikasi status Listener menggunakan lsnrctl status untuk memastikan layanan database standby telah teregistrasi dan berjalan
+    <img width="844" height="685" alt="Screenshot (1124)" src="https://github.com/user-attachments/assets/7f5188b8-7481-42e5-9295-e880d00547e5" />
+
+
+35. Resgistrasi service database standby dan mengaktifkan pdb spesifik sebagai testing database
+
+    <img width="635" height="501" alt="Screenshot (1125)" src="https://github.com/user-attachments/assets/5e613b87-b01b-4e18-b573-e22d31046a0e" />
+
+
+36. Menentukan lokasi penyimpanan file konfigurasi Data Guard Broker (DG_BROKER_CONFIG_FILE) secara redundan pada diskgroup +DATA dan +FRA agar konfigurasi dapat diakses secara terpusat
+
+    <img width="829" height="452" alt="Screenshot (1126)" src="https://github.com/user-attachments/assets/d7c0c227-e9ee-4b5d-a163-4b8a8d0aba32" />
+    <img width="900" height="452" alt="Screenshot (1127)" src="https://github.com/user-attachments/assets/2ca1664f-eb61-451c-a693-9cfbc28ed868" />
+
+
+37. Mengaktifkan Data Guard Broker dengan mengubah parameter DG_BROKER_START=TRUE. Memastikan proses background DMON berjalan untuk mulai mengelola database
+
+    <img width="1920" height="1080" alt="Screenshot (1129)" src="https://github.com/user-attachments/assets/d1b8d5b3-08c3-47a4-9e6f-2f560627b512" />\
+
+
+38. Membuat objek konfigurasi pada utility DGMGRL, mendefinisikan namedbprimary sebagai primary, menambahkan namedbstandby sebagai standby, lalu mengaktifkan (enable) seluruh konfigurasi tersebut
+
+    <img width="1025" height="316" alt="Screenshot (1129)" src="https://github.com/user-attachments/assets/7268917e-d15b-4ba2-b7db-40c82cd32f27" />
+
+
+39. Melakukan verifikasi akhir dengan perintah SHOW CONFIGURATION. Hasil SUCCESS menunjukkan primary dan standby sudah terhubung dan sinkron di bawah kendali Broker
+
+    <img width="807" height="806" alt="Screenshot (1130)" src="https://github.com/user-attachments/assets/bcf875a8-9723-42ce-9418-1e987d72531d" />
+    - protection mode : maxPerformance = data replikasi dikirim secara asyncronous 
+
+
+40. Verifikasi status sinkronisasi log dan proses background pada standby
+    - Memastikan database berada dalam mode READ ONLY WITH APPLY (Active Data Guard), di mana database dapat dibaca sementara proses MRP terus menerapkan (apply) perubahan dari Primary
+
+    <img width="1166" height="423" alt="Screenshot (1131)" src="https://github.com/user-attachments/assets/9c063e6c-8477-4fb1-ade1-ed5c3444cd6e" />
+
+
+41. Membuat tabel testing dan melakukan input data (DML) pada database Primary, kemudian melakukan COMMIT untuk memicu pengiriman redo data ke database Standby melalui proses NSS/NSA
+
+    <img width="644" height="555" alt="Screenshot (1133)" src="https://github.com/user-attachments/assets/301ddda7-cc19-419e-9f32-28471cccfd06" />
+
+
+42. Melakukan verifikasi data pada database Standby
+
+    <img width="662" height="435" alt="Screenshot (1134)" src="https://github.com/user-attachments/assets/a5930ff5-a0e5-495f-b07d-16b022110153" />
+    - Keberadaan tabel dan data yang identik dengan Primary membuktikan bahwa fitur Real-Time Apply telah berhasil mereplikasi perubahan secara instan
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+    
 
 
 
