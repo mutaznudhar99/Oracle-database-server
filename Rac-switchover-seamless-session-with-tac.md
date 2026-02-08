@@ -1,10 +1,8 @@
 Pada sesi kali ini, saya akan mengimplementasikan Application Continuity untuk zero downtime selama proses maintenance atau failover. Tujuannya memastikan sesi user pada level aplikasi tetap berjalan tanpa error dengan memanfaatkan kapabilitas Oracle Real Application Clusters (RAC)
 
 hal yang dipersiakan:
-- Instalasi grid & RAC database
-- Swingbench sebagai tool testing atau client untuk mensimulasikan data workload secara real-time
-- Connection string untuk support fitur application continuity
-
+- 2 Node Rac database
+- Connection string untuk mengkoneksikan database dengan client (aplikasi)
 
 
 1. Verifikasi status grid infrastructure (RAC Node) dan SCAN listener
@@ -42,10 +40,8 @@ hal yang dipersiakan:
 
 7. Melakukan uji Komparasi: simulasi failover tanpa fitur TAC (default service)
 
-   
-    
-    <img width="1731" height="654" alt="Screenshot (1048)" src="https://github.com/user-attachments/assets/e50295e7-1c63-4aa2-b105-e223d6b8b047" />
-    <img width="1711" height="774" alt="Screenshot (1049)" src="https://github.com/user-attachments/assets/248f24ad-11ea-4d30-902c-8ffeedd7960d" />
+   <img width="1723" height="476" alt="Screenshot (1224)" src="https://github.com/user-attachments/assets/85ec82da-d5b4-4308-a679-757bb0bbcc2e" />
+
 
 
     
