@@ -16,6 +16,12 @@ hal yang dipersiakan:
 
    <img width="734" height="387" alt="Screenshot (1031)" src="https://github.com/user-attachments/assets/039b62d0-394a-4403-940f-b299e9a311a6" />
 
+
+3. Verifikasi service TAC menggunakan utilitas sqlplus. Memastikan konfigurasi berjalan pada level database
+
+   <img width="1480" height="490" alt="Screenshot (1221)" src="https://github.com/user-attachments/assets/97a8c85a-7f2e-4536-a565-7c246ef6f658" />
+
+
 3. Create Connection String (TNS) pada Sisi Server (Node 1)
 
    <img width="982" height="208" alt="Screenshot (1032)" src="https://github.com/user-attachments/assets/df3d481b-28d7-4c3f-9d10-e1361c1628ea" />
@@ -24,31 +30,19 @@ hal yang dipersiakan:
 
    <img width="643" height="334" alt="Screenshot (1033)" src="https://github.com/user-attachments/assets/9190a560-4221-45c2-9bad-11a9c82624ba" />
 
-5. Setting connection pooling pada swingbench
+5. Melakukan input data (INSERT) sebagai bahan testing untuk memvalidasi keberhasilan proses replay transaksi saat terjadi switcover atau failover
 
-   <img width="653" height="430" alt="Screenshot (1043)" src="https://github.com/user-attachments/assets/e9522414-ebe4-4d48-9765-fb982f71acdd" />
+   <img width="552" height="287" alt="Screenshot (1222)" src="https://github.com/user-attachments/assets/feb25828-abe7-45b0-a196-be607003a123" />
 
-6. Monitoring sesi user awal melalui SQL*Plus
-
-   <img width="711" height="512" alt="Screenshot (1034)" src="https://github.com/user-attachments/assets/4626a412-b9e7-481a-b056-646954efdd89" />
-
-7. Inisialisasi data workload menggunakan swingbench
-
-   <img width="953" height="653" alt="Screenshot (1035) - Copy" src="https://github.com/user-attachments/assets/5921a0e8-5e33-4359-8631-1676bb0df70d" />
-
-8. Verifikasi Load Balancing antar Node RAC
-
-   <img width="759" height="607" alt="Screenshot (1035)" src="https://github.com/user-attachments/assets/a500e2f4-2706-4b2f-bf59-67835969eb41" />
        
-9. Simulasi failover (Instance Shutdown) pada node 1 dan monitoring transparansi sesi
+6. Simulasi switchover manual pada node 1 dan verifikasi keberhasilan replay transaksi. Memastikan proses transaksi tetap berjalan, dan peran database berpindah host
 
-   <img width="1771" height="649" alt="Screenshot (1036)" src="https://github.com/user-attachments/assets/12debec9-e453-455e-ba0a-715ac73ba700" />
+   <img width="1501" height="546" alt="Screenshot (1223)" src="https://github.com/user-attachments/assets/b14d5782-3d40-4a9f-8cb5-df80b75c2cc3" />
 
-10. Validasi perpindahan sesi (Replay) ke node RAC yang lainnya
 
-    <img width="734" height="744" alt="Screenshot (1037)" src="https://github.com/user-attachments/assets/12e83293-c311-4c3a-b542-41234ddcc361" />
+7. Melakukan uji Komparasi: simulasi failover tanpa fitur TAC (default service)
 
-11. Uji Komparasi: simulasi failover tanpa fitur TAC (default service)
+   
     
     <img width="1731" height="654" alt="Screenshot (1048)" src="https://github.com/user-attachments/assets/e50295e7-1c63-4aa2-b105-e223d6b8b047" />
     <img width="1711" height="774" alt="Screenshot (1049)" src="https://github.com/user-attachments/assets/248f24ad-11ea-4d30-902c-8ffeedd7960d" />
