@@ -66,7 +66,7 @@ hal yang dipersiapkan:
    <img width="799" height="289" alt="Screenshot (892)" src="https://github.com/user-attachments/assets/386454bd-1674-4a67-9b93-114761961e63" />
 
 
-9. Create password untuk grid dan oracle untuk proses autentifikasi SSH berjalan
+9. Create password grid dan oracle untuk proses autentifikasi SSH berjalan
 
    <img width="936" height="259" alt="Screenshot (893)" src="https://github.com/user-attachments/assets/8ab30240-7e57-4297-85f7-82d8e90f6da7" />
 
