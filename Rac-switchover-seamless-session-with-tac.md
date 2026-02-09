@@ -6,7 +6,7 @@ hal yang dipersiakan:
 - Connection string untuk mengkoneksikan database dengan client (aplikasi)
 
 
-1. Memastikan seluruh stack Clusterware di semua node berstatus Online.
+1. Verifikasi semua stack Clusterware dan listener di semua node berstatus online
 
    <img width="563" height="89" alt="Screenshot (1014)" src="https://github.com/user-attachments/assets/a5767f24-4ff1-4aff-a0e2-ffda421327df" />
    <img width="560" height="150" alt="Screenshot (1030)" src="https://github.com/user-attachments/assets/2d7c1771-aecb-4847-91ed-9ef14854768b" />
@@ -24,7 +24,7 @@ hal yang dipersiakan:
    - notificati: True, Mengaktifkan Fast Application Notification (FAN). Mengirim sinyal ke driver aplikasi (JDBC/OCI) segera melakukan failover ke node rac yang available
 
 
-3. Melakukan validasi TAC pada level instance. Memastikan service sudah aktif pada database
+3. Melakukan validasi TAC pada level instance. Memastikan parameter TAC sudah aktif pada database
 
    <img width="1480" height="490" alt="Screenshot (1221)" src="https://github.com/user-attachments/assets/97a8c85a-7f2e-4536-a565-7c246ef6f658" />
 
