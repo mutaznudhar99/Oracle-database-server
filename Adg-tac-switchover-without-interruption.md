@@ -25,7 +25,7 @@ hal yang dipersiapkan:
    - commitout : True, menyimpan status transaksi terakhir di database
    - failoverre: Auto, otomatisasi recovery sesi aktif ke new database primary
    - replay_ini: Batas waktu sistem diperbolehkan replay(eksekusi ulang) transaksi yang gagal akibat putus koneksi
-   - notificati: True, Mengaktifkan Fast Application Notification (FAN). Mengirimkan sinyal "cepat" ke driver aplikasi (JDBC/OCI) agar segera melakukan failover ke database yang available
+   - notificati: True, mengaktifkan fast application notification (FAN). Mengirim sinyal ke driver aplikasi (JDBC/OCI) segera melakukan failover ke database yang available
 
 
 3. Copy client connectivity (tnsnames.ora) untuk mengintegrasikan konfigurasi service prod_tac pada sisi aplikasi client
