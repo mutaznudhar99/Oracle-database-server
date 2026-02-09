@@ -14,6 +14,14 @@ hal yang dipersiakan:
 2. Create service database khusus dengan konfigurasi Transparent Application Continuity (TAC).
 
    <img width="734" height="387" alt="Screenshot (1031)" src="https://github.com/user-attachments/assets/039b62d0-394a-4403-940f-b299e9a311a6" />
+   - db        : Menentukan nama database service
+   - preferred : Mendaftarkan node active ke dalam database service khusus tac
+   - failoverty: Auto, konfigurasi utama menngaktifkan fitur TAC
+   - famethod  : Basic, metode failover standar untuk membangun kembali koneksi setelah terjadi switchover atau failover
+   - commitout : True, menyimpan status transaksi terakhir di database
+   - failoverre: Auto, otomatisasi recovery sesi aktif ke new database primary
+   - replay_ini: Batas waktu sistem diperbolehkan replay(eksekusi ulang) transaksi yang gagal akibat putus koneksi
+   - notificati: True, Mengaktifkan Fast Application Notification (FAN). Mengirim sinyal ke driver aplikasi (JDBC/OCI) segera melakukan failover ke node rac yang available
 
 
 3. Melakukan validasi TAC pada level instance. Memastikan service sudah aktif pada database
