@@ -17,10 +17,10 @@ hal yang dipersiapkan:
 
 
 
-1. Melakukan konfigurasi resource virtual machine untuk kedua server rac. Memastikan konfigurasi resource identik.
+1. Melakukan konfigurasi resource virtual machine untuk kedua server rac. Memastikan konfigurasi resource identik
 
    <img width="383" height="514" alt="Screenshot (881)" src="https://github.com/user-attachments/assets/cea52359-5be1-4bdf-a2c3-414fca033a4b" />
-   - 4 GB : untuk CPU core
+   - 4 GB   : untuk CPU core
    - 100 GB : storage untuk instalasi software grid and oracle db
    - network adapter : connector antar node server untuk menjalankan RAC
 
@@ -36,7 +36,7 @@ hal yang dipersiapkan:
 
    <img width="806" height="405" alt="Screenshot (883)" src="https://github.com/user-attachments/assets/13b7cd0b-d5c1-4ac9-830f-7f8e1f9c3e2b" />
    - Virtual IP : sebagai IP failover, apabila node 1 mati, IP vip akan berpindah ke node yang available
-   - SCAN IP : sebagai side client access name. client cukup mengakses satu nama hostname SCAN IP untuk bisa mengakses seluruh instance di dalam cluster rac
+   - SCAN IP    : sebagai side client access name. client cukup mengakses satu nama hostname SCAN IP untuk bisa mengakses seluruh instance di dalam cluster rac
 
 
 4. Melakukan testing connection menggunakan perintah ping ke seluruh hostname (Public, Private, dan VIP) untuk memastikan tidak ada blokade firewall antar node
@@ -44,39 +44,39 @@ hal yang dipersiapkan:
    <img width="915" height="348" alt="Screenshot (884)" src="https://github.com/user-attachments/assets/b08bde9b-30eb-4421-8ed0-37dc2fcfbc5c" />
 
 
-5. Menginstall paket oracle database untuk mengkonfigurasi environtment oracle sebelum melakukan instalasi grid infrastucture dan oracle database
+5. Instalasi paket oracle-database-preinstall-19c untuk mengotomatisasi konfigurasi kernel, user, dan group sesuai best practice Oracle
 
    <img width="1594" height="371" alt="Screenshot (885)" src="https://github.com/user-attachments/assets/244e2330-b93a-4f98-b233-fcf6f954c9bb" />
 
 
-6. Validasi kernel parameter oracle untuk menangani workload database oracle seperti shared memory
+6. Validasi parameter kernel sistem pasca-instalasi paket pre-install. Memastikan kepatuhan terhadap threshold minimum shared memory Oracle 19c
 
    <img width="428" height="330" alt="Screenshot (887)" src="https://github.com/user-attachments/assets/1d5095c7-ef86-44b4-8735-cd72eaa6cd37" />
 
 
-7. Create spesific group untuk instalasi grid infrastructure and oracle db home
+7. Create spesific group sistem tambahan untuk memisahkan hak akses administratif antara manajemen storage (ASM) dan manajemen database
 
    <img width="516" height="533" alt="Screenshot (889)" src="https://github.com/user-attachments/assets/062be088-0c83-43ee-bb7c-a7ccbcd7be09" />
    - asmoper, asmadmin, asmdba : sebagai user manage clsuterware dan disk group ASM
 
 
-8. Add user ke dalam group grid and oracle 
+8. Update hak akses user oracle dan grid agar memiliki wewenang yang tepat dalam mengelola infrastucture resources
 
    <img width="1414" height="123" alt="Screenshot (890)" src="https://github.com/user-attachments/assets/5ad61fc3-81c9-49e3-b651-f7c9a31b1d0e" />
    <img width="799" height="289" alt="Screenshot (892)" src="https://github.com/user-attachments/assets/386454bd-1674-4a67-9b93-114761961e63" />
 
 
-9. Create password grid dan oracle untuk proses autentifikasi SSH berjalan
+9. Melakukan konfigurasi security hardening untuk akun sistem yang akan menjalankan infrastructure resources grid dan oracle database
 
    <img width="936" height="259" alt="Screenshot (893)" src="https://github.com/user-attachments/assets/8ab30240-7e57-4297-85f7-82d8e90f6da7" />
 
 
-10. Konfigurasi security limits untuk meningkatkan batasan file descriptors dan processes
+10. Konfigurasi batasan proses (soft/hard limits) pada /etc/security/limits.conf untuk menjaga stabilitas performa database di bawah wodkload yang tinggi
 
       <img width="398" height="380" alt="Screenshot (894)" src="https://github.com/user-attachments/assets/c94b8d17-9537-4eb3-bf72-1c32e3396133" />
 
 
-11. Membuat direktori utama untuk grid infrastructure, inventory, dan oracle db home
+11. Membangun struktur direktori berdasarkan standar Optimal Flexible Architecture (OFA) untuk memisahkan biner software, konfigurasi, dan log inventory
     <img width="1464" height="210" alt="Screenshot (895)" src="https://github.com/user-attachments/assets/a2a7c48b-d6a9-492b-b42d-c4dd36f55443" />
 
 
@@ -87,24 +87,21 @@ hal yang dipersiapkan:
     - User oracle : sebagai pemilik direktori untuk oracle db home
 
 
-13. Set variable envirotnment grid infrastucture dan oracle db home  
-    - vi .bash_profile
+13. Set variable environment pada file .bash_profile untuk masing-masing user grid dan oracle. Memudahkan eksekusi perintah administratif Oracle tanpa perlu mengetik lokasi folder secara manual
 
       <img width="785" height="416" alt="Screenshot (897)" src="https://github.com/user-attachments/assets/c6ac2928-cc9c-4674-aca6-8c7b36e6d5f6" />
       <img width="767" height="419" alt="Screenshot (898)" src="https://github.com/user-attachments/assets/41778db8-5c3c-4840-afb5-a8c0c7d8db07" />
-      - user grid : untuk mengelola clusterware dan disk group ASM
-      - user oracle : untuk mengelola database 
+      - User grid : untuk mengelola clusterware dan disk group ASM
+      - User oracle : untuk mengelola database 
 
 
-14. Disable firewall dan selinux. Mencegah proses komunikasi antar-node dan akses port database tidak terblokir
+14. Stop dan disabled service firewall, selinux, atau melakukan filtering port untuk menjamin komunikasi tanpa hambatan antara Listener, ASM, dan Database
 
-    <img width="1580" height="354" alt="Screenshot (900)" src="https://github.com/user-attachments/assets/e8299ca8-fddf-43e5-a9cd-cecc1e7d2a1b" />
-    
-    - vi /etc/selinux/config
+    <img width="1580" height="354" alt="Screenshot (900)" src="https://github.com/user-attachments/assets/e8299ca8-fddf-43e5-a9cd-cecc1e7d2a1b" />  
     <img width="888" height="184" alt="Screenshot (901)" src="https://github.com/user-attachments/assets/2e34248e-a51b-408a-a57d-07b91e234a1f" />
 
 
-15. Disable konfigurasi namserver dan set konfigurasi nsswitch.conf ke hostname. Memastikan system mendahulukan name resolution local /etc/hosts daripada DNS agar tidak terjadi latency/kegagalan saat setup instalasi grid infrastructure 
+15. Disable konfigurasi nameserver dan set konfigurasi nsswitch.conf ke hostname. Memastikan system mendahulukan name resolution local /etc/hosts daripada DNS agar tidak terjadi latency/kegagalan saat setup instalasi grid infrastructure 
     
     <img width="379" height="64" alt="Screenshot (995)" src="https://github.com/user-attachments/assets/856d4315-714e-4623-b7b2-abfa053685c6" />
     <img width="377" height="75" alt="Screenshot (902)" src="https://github.com/user-attachments/assets/06e53072-fd5f-4b84-b7e5-a199b395036c" />
@@ -121,40 +118,38 @@ hal yang dipersiapkan:
     <img width="370" height="582" alt="Screenshot (906)" src="https://github.com/user-attachments/assets/3005aab8-bddb-4dd4-aa3e-02e33bb07433" />
 
 
-18. Validasi shared virtual disk terkonfigurasi di level os server
+18. Validasi shared virtual disk menggunakan utilitas lsblk sebelum dilakukan proses partisi
 
     <img width="518" height="266" alt="Screenshot (907)" src="https://github.com/user-attachments/assets/b85425db-0bab-4c74-b4ff-2726498aafc4" />
 
 
-19. Melakukan partisi disk pada server Node 1 dan validasi table partisi di server Node 2. Menghindari shared virtual disk dianggap kosong dan memudahkan konfigurasi UDEV rules
+19. Melakukan partisi disk pada server Node 1 untuk didaftarkan sebagai anggota ASM Disk Group. Kemudian validasi table partisi di server Node 2
 
     <img width="703" height="538" alt="Screenshot (908)" src="https://github.com/user-attachments/assets/e5f17da5-f320-4bf1-9a9b-1af14c04a139" />
     <img width="523" height="346" alt="Screenshot (909)" src="https://github.com/user-attachments/assets/9c7ca8bb-f864-4adc-bf32-614bad929ad4" />
 
 
-20. Mencari SCSI ID (UUID) dari setiap shared disk untuk memastikan persistensi penamaan device menggunakan UDEV Rules di kedua server
+20. Mencari SCSI ID (UUID) dari setiap shared disk. Memastikan persistensi penamaan device menggunakan UDEV Rules di kedua server
 
     <img width="592" height="160" alt="Screenshot (910)" src="https://github.com/user-attachments/assets/907417dc-7ed2-4be0-b73b-173450db1e70" />
 
 
-21. Mendaftarkan SCSI ID (UUID) disk ke dalam konfigurasi UDEV Rules di kedua server untuk melakukan binding secara permanen antara ID perangkat fisik dengan user grid
-    - vi /etc/udev/rules.d/99-oracle-asmdevices.rules
+21. Konfigurasi UDEV RULES pada kedua server. Memastikan identitas, ownership, dan hak akses disk ASM tetap konsisten (persisten) setelah sistem dijalankan ulang
 
       <img width="1607" height="251" alt="Screenshot (911)" src="https://github.com/user-attachments/assets/073fdfae-5ddf-4c8f-b457-13c6aee0724b" />
 
 
-22. Load dan trigger konfigurasi udev rules agar diterapkan di kedua server
+22. Load dan trigger konfigurasi udev rules agar konfigurasi diterapkan di kedua server
 
     <img width="604" height="70" alt="Screenshot (912)" src="https://github.com/user-attachments/assets/731474f5-70ed-4bea-8316-f098f9d33011" />
 
 
-23. Validasi hasil udev rules 
+23. Validasi hasil udev rules. Memastikan user grid memiliki ownership shared virtual disk (storage) 
 
     <img width="656" height="272" alt="Screenshot (913)" src="https://github.com/user-attachments/assets/d8c3532e-446d-4d60-b11c-3d6e7ef260c9" />
 
 
 24. Mengatur kapasitas temporary files pada direktori /dev/shm melalui file /etc/fstab untuk mendukung penggunaan shared memory (SGA) oracle database. Menghindari kegagalan size SGA saat instalasi database
-    - vi /etc/fstab
 
       <img width="941" height="297" alt="Screenshot (914)" src="https://github.com/user-attachments/assets/56a40822-38b5-4545-a20e-52959006cf32" />
 
@@ -164,18 +159,18 @@ hal yang dipersiapkan:
     <img width="987" height="201" alt="Screenshot (916)" src="https://github.com/user-attachments/assets/1cfc1d8f-0b32-43bb-9b0d-d90ad6bba197" />
 
 
-26. Validasi keberadaan file installer grid infrastucture dan oracle database 
+26. Validasi eksistensi file installer grid infrastucture dan oracle database 
 
     <img width="734" height="225" alt="Screenshot (918)" src="https://github.com/user-attachments/assets/90d3f0f1-fcb4-4cdc-990a-faf080dfd6e6" />
 
 
-27. Melakukan extract paket grid infrastructure ke dalam direktori GRID_HOME menggunakan user grid, dan melakukan validasi struktur direktori
+27. Melakukan extract paket instalasi Grid Infrastructure dan Database menggunakan user grid, dan melakukan validasi struktur direktori
 
     <img width="728" height="180" alt="Screenshot (919)" src="https://github.com/user-attachments/assets/f28e5d68-a522-400d-bf65-484fdb4088e0" />
     <img width="603" height="214" alt="Screenshot (920)" src="https://github.com/user-attachments/assets/04dabdc2-00b5-4c61-ab99-6bd32439af99" />
 
 
-28. Menginstal paket cvuqdisk agar cluster verification utility (CVU) dapat mengidentifikasi dan memvalidasi shared disk yang akan digunakan oleh oracle ASM
+28. Instalasi paket cvuqdisk pada server node 1 agar cluster verification utility (CVU) dapat mengidentifikasi dan memvalidasi shared disk yang akan digunakan oleh oracle ASM
 
     <img width="791" height="129" alt="Screenshot (921)" src="https://github.com/user-attachments/assets/1cf3f179-4f9f-4cff-ad30-fdb572d86d65" />
 
@@ -185,7 +180,7 @@ hal yang dipersiapkan:
     <img width="610" height="160" alt="Screenshot (922)" src="https://github.com/user-attachments/assets/f652c1c0-c390-4abe-a41d-45535a58c090" />
 
 
-30. Validasi konektivitas SSH untuk memastikan user dapat melakukan login antar node tanpa password
+30. Validasi konektivitas SSH. Memastikan user dapat melakukan login antar node tanpa password
 
     <img width="952" height="498" alt="Screenshot (923)" src="https://github.com/user-attachments/assets/a9afdf8d-c08f-407b-a47c-946a18902fab" />
 
@@ -195,7 +190,7 @@ hal yang dipersiapkan:
     <img width="917" height="96" alt="Screenshot (924)" src="https://github.com/user-attachments/assets/31ae688d-0306-46af-81c2-89adfaa20369" />
 
 
-32. Menjalankan dan mengonfigurasi oracle grid infrastructure for a New Cluster menggunakan wizard gridSetup.sh untuk membentuk klaster RAC (Real Application Clusters)
+32. Menjalankan dan mengkonfigurasi oracle grid infrastructure for a New Cluster menggunakan wizard gridSetup.sh untuk membentuk klaster RAC (Real Application Clusters)
 
     <img width="627" height="112" alt="Screenshot (928)" src="https://github.com/user-attachments/assets/95ca65bd-0499-49dd-ae0d-f4199ae69215" />
     <img width="985" height="910" alt="Screenshot (929)" src="https://github.com/user-attachments/assets/fe3fe3d7-e508-4570-a56a-88e9c5c4cfb1" />
