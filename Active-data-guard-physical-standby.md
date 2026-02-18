@@ -12,7 +12,7 @@ Hal yang dipersiapkan:
 
 
 
-1. Verifikasi cluster resource dan listener sudah berjalan (online) 
+1. Melakukan verifikasi cluster resource dan listener pada kedua server sudah berjalan (online) 
 
    <img width="1599" height="879" alt="Screenshot (1057)" src="https://github.com/user-attachments/assets/095f59e6-6ce4-4197-bd37-17cdc1cba728" />
 
