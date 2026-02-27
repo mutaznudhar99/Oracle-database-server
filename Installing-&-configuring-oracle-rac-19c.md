@@ -95,7 +95,7 @@ hal yang dipersiapkan:
       - User oracle : untuk mengelola database 
 
 
-14. Stop dan disabled service firewall, selinux, atau melakukan filtering port untuk menjamin komunikasi tanpa hambatan antara Listener, ASM, dan Database
+14. Stop dan disabled service firewall dan selinux untuk menjamin komunikasi tanpa hambatan antara Listener, ASM, dan Database
 
     <img width="1580" height="354" alt="Screenshot (900)" src="https://github.com/user-attachments/assets/e8299ca8-fddf-43e5-a9cd-cecc1e7d2a1b" />  
     <img width="888" height="184" alt="Screenshot (901)" src="https://github.com/user-attachments/assets/2e34248e-a51b-408a-a57d-07b91e234a1f" />
