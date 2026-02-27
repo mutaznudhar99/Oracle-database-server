@@ -79,7 +79,7 @@ hal yang dipersiapkan:
     <img width="1683" height="337" alt="Screenshot (647)" src="https://github.com/user-attachments/assets/ce6828cf-4b54-45ca-b163-54b4a04f2ca0" />
 
 
-14. Menambahkan virtual disk tambahan sebagai raw storage yang digunakan sebagai manage storage unit oleh Oracle ASM
+14. Menambahkan virtual disk tambahan sebagai raw storage yang di manage oleh Oracle ASM
 
     <img width="695" height="235" alt="Screenshot (749)" src="https://github.com/user-attachments/assets/7d9455a9-89d0-401a-a3c0-97cbb8f4b968" />
     <img width="863" height="248" alt="Screenshot (750)" src="https://github.com/user-attachments/assets/fc820a92-c6fb-4713-90b2-cd4f3ae43f96" />
