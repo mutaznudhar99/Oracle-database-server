@@ -170,7 +170,7 @@ hal yang dipersiapkan:
     <img width="996" height="775" alt="Screenshot (675)" src="https://github.com/user-attachments/assets/8d2b6f66-afba-408f-8cd2-1e2d49038313" />
     <img width="992" height="773" alt="Screenshot (676)" src="https://github.com/user-attachments/assets/3a71ff81-20ce-4fce-a577-e3b741f119d1" />
     <img width="990" height="774" alt="Screenshot (677)" src="https://github.com/user-attachments/assets/355f3aee-f7ff-48b6-b021-e5ab82c05b35" />
-    <img width="985" height="779" alt="Screenshot (678)" src="https://github.com/user-attachments/assets/88a9a0f9-09c5-4bf9-a544-dbbfb500986e" />
+    
 
 
 31. Melakukan konfigurasi ASM Disk Group menggunakan ASMCA (ASM Configuration Assistant) untuk membangun Disk Group DATA (datafiles) dan ARCHIVE (recovery/backup) pada layer ASM
