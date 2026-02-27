@@ -206,7 +206,6 @@ hal yang dipersiapkan:
     <img width="990" height="777" alt="Screenshot (939)" src="https://github.com/user-attachments/assets/ce46c9cb-6f98-4273-ac7c-642a919ce60b" />
     <img width="1001" height="785" alt="Screenshot (940)" src="https://github.com/user-attachments/assets/b547d992-a1ff-402c-896d-dd655cef072e" />
     <img width="989" height="759" alt="Screenshot (941)" src="https://github.com/user-attachments/assets/a43c039d-9781-4d04-a511-7b7da29c1670" />
-    <img width="993" height="772" alt="Screenshot (942)" src="https://github.com/user-attachments/assets/7f5ec0fa-b86b-401a-bade-10fb84af7bc1" />
     <img width="1003" height="779" alt="Screenshot (943)" src="https://github.com/user-attachments/assets/45a05257-5f9a-4751-8cc3-c3f168532ffb" />
     <img width="984" height="787" alt="Screenshot (944)" src="https://github.com/user-attachments/assets/fa163d4d-70f9-4a6f-b086-7f9650d90066" />
     <img width="713" height="388" alt="Screenshot (945)" src="https://github.com/user-attachments/assets/b4c82c9b-e404-444d-8b2c-db77c6dc007f" />
