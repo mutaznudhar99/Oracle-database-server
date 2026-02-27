@@ -101,7 +101,7 @@ hal yang dipersiapkan:
     <img width="888" height="184" alt="Screenshot (901)" src="https://github.com/user-attachments/assets/2e34248e-a51b-408a-a57d-07b91e234a1f" />
 
 
-15. Disable konfigurasi nameserver dan set konfigurasi nsswitch.conf ke hostname. Memastikan system mendahulukan name resolution local /etc/hosts daripada DNS agar tidak terjadi latency/kegagalan saat setup instalasi grid infrastructure 
+15. Disable konfigurasi nameserver dan set konfigurasi nsswitch.conf ke librari hosts. Memastikan system mendahulukan name resolution local /etc/hosts daripada DNS eksternal agar tidak terjadi latency/kegagalan apabila penggunaan DNS eksternal sedang down/lambat untuk menjaga komunikasi antar node Oracle RAC tetap berjalan. 
     
     <img width="379" height="64" alt="Screenshot (995)" src="https://github.com/user-attachments/assets/856d4315-714e-4623-b7b2-abfa053685c6" />
     <img width="377" height="75" alt="Screenshot (902)" src="https://github.com/user-attachments/assets/06e53072-fd5f-4b84-b7e5-a199b395036c" />
