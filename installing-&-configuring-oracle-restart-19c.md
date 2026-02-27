@@ -55,7 +55,7 @@ hal yang dipersiapkan:
    <img width="910" height="307" alt="Screenshot (639)" src="https://github.com/user-attachments/assets/1bcad034-2bef-4d61-a938-0a26cffeda99" />
 
 
-10. Konfigurasi batasan proses (soft/hard limits) pada /etc/security/limits.conf untuk menjaga stabilitas performa database di bawah wodkload yang tinggi
+10. Konfigurasi batasan proses (soft/hard limits) pada /etc/security/limits.conf membatasi penggunaan sumber daya sistem (resource limits) bagi setiap user atau grup
 
     <img width="436" height="344" alt="Screenshot (748)" src="https://github.com/user-attachments/assets/39edce24-4d78-4813-86a6-136c14ba9e4d" />
 
