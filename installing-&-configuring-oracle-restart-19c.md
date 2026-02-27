@@ -96,58 +96,53 @@ hal yang dipersiapkan:
     <img width="792" height="541" alt="Screenshot (649)" src="https://github.com/user-attachments/assets/f6f48b83-69a6-4466-b5ca-8e193fb29532" />
     <img width="560" height="290" alt="Screenshot (650)" src="https://github.com/user-attachments/assets/c62d611b-eb81-42a2-859a-5f7c490bee67" />
 
-    
-17. Membuat direktori temporer untuk penempatan file software installer sebelum proses extract file dilakukan
 
-    <img width="648" height="56" alt="Screenshot (755)" src="https://github.com/user-attachments/assets/b733cd09-4f1e-4de1-a340-ce8578799951" />
-
-
-18. Konfigurasi UDEV RULES. Memastikan identitas, ownership, dan hak akses disk ASM tetap konsisten (persisten) setelah sistem dijalankan ulang
+17. Konfigurasi UDEV RULES. Memastikan identitas, ownership, dan hak akses disk ASM tetap konsisten (persisten) setelah sistem dijalankan ulang
 
     <img width="1501" height="129" alt="Screenshot (656)" src="https://github.com/user-attachments/assets/68096996-b500-4f49-9a8e-14b07499c94f" />
 
 
-19. Menerapkan aturan UDEV dan memverifikasi pembuatan symbolic link untuk memastikan aksesibilitas disk oleh user grid
+18. Menerapkan aturan UDEV dan memverifikasi pembuatan symbolic link untuk memastikan aksesibilitas disk oleh user grid
 
     <img width="714" height="141" alt="Screenshot (657)" src="https://github.com/user-attachments/assets/6f74b4fc-8295-439c-b48e-918c75758765" />
 
 
-20. Mengubah ownership perangkat disk ke user grid sebagai syarat mutlak instalasi Grid Infrastructure
+19. Mengubah ownership perangkat disk ke user grid sebagai syarat mutlak instalasi Grid Infrastructure
 
     <img width="808" height="150" alt="Screenshot (754)" src="https://github.com/user-attachments/assets/6a35a8ae-29db-4d3a-88f5-db36b40f8d9c" />
 
 
-21. Install file biner Oracle 19c Grid & Database ke dalam server
+20. Install file biner Oracle 19c Grid & Database ke dalam server
 
     <img width="1709" height="601" alt="Screenshot (756)" src="https://github.com/user-attachments/assets/1600a482-60a1-4674-8062-0aca9a3448ab" />
 
 
-22. Mengaktifkan fitur shared folder pada VM untuk transfer data antara host (desktop) dan guest (server OS)
+21. Mengaktifkan fitur shared folder pada VM untuk transfer data antara host (desktop) dan guest (server OS)
 
     <img width="852" height="318" alt="Screenshot (757)" src="https://github.com/user-attachments/assets/e1d970fd-3f1d-4682-b09a-19f09d39ea70" />
 
 
-23. Memindahkan file installer dari direktori mount ke server local storage untuk mempercepat proses ekstraksi
+22. Memindahkan file installer dari direktori mount ke server local storage untuk mempercepat proses ekstraksi
 
     <img width="816" height="218" alt="Screenshot (758)" src="https://github.com/user-attachments/assets/1f278ce4-29b3-43de-836c-9a5106118f53" />
 
 
-24. Melakukan proses mount pada media shared. Memastikan aksesibilitas file biner oleh sistem
+23. Melakukan proses mount pada media shared. Memastikan aksesibilitas file biner oleh sistem
 
     <img width="1097" height="188" alt="Screenshot (660)" src="https://github.com/user-attachments/assets/5823f8b9-56fd-40ce-86c1-49a65854c20f" />
 
 
-25. Copy file installer ke masing-masing direktori $ORACLE_HOME grid & oracle home untuk menjaga isolasi antar software
+24. Copy file installer ke masing-masing direktori $ORACLE_HOME grid & oracle home untuk menjaga isolasi antar software
 
     <img width="1086" height="106" alt="Screenshot (661)" src="https://github.com/user-attachments/assets/19bdd2fe-0a85-4380-b824-cb785d26b40e" />
 
 
-26. Validasi eksistensi file installer di direktori $ORACLE_HOME. Memastikan proses file copy berhasil sebelum dilakukan ekstraksi
+25. Validasi eksistensi file installer di direktori $ORACLE_HOME. Memastikan proses file copy berhasil sebelum dilakukan ekstraksi
 
     <img width="806" height="155" alt="Screenshot (661) - Copy" src="https://github.com/user-attachments/assets/69bf36e5-ab9e-4950-8dca-9e1e95415ff8" />
 
 
-27. Melakukan extract paket instalasi Grid Infrastructure dan Database menggunakan user yang relevan
+26. Melakukan extract paket instalasi Grid Infrastructure dan Database menggunakan user yang relevan
 
     <img width="815" height="337" alt="Screenshot (663)" src="https://github.com/user-attachments/assets/740d4f43-2c9a-4665-994a-848c1d64714f" />
     <img width="787" height="202" alt="Screenshot (707)" src="https://github.com/user-attachments/assets/c5a2df44-d277-42f6-a4cc-7e4b257446ba" />
