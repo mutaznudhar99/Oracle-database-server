@@ -1,4 +1,4 @@
-pada sesi kali ini, saya akan melakukan instalasi dan konfigurasi Oracle Real Application Clusters (RAC) menggunakan dua node server sebagai infrastruktur Primary. Implementasi ini dirancang untuk menjamin Local High Availability (HA) dengan memanfaatkan arsitektur Shared Storage dan Oracle Automatic Storage Management (ASM)
+pada sesi kali ini, saya akan melakukan instalasi dan konfigurasi Oracle Real Application Clusters (RAC) menggunakan dua node server sebagai infrastruktur Primary. Implementasi ini dirancang sebagai basic knowledge Local High Availability (HA) dengan memanfaatkan arsitektur Shared Storage dan Oracle Automatic Storage Management (ASM).
 
 kelebihan RAC:
 - High availability & scalability
@@ -25,21 +25,21 @@ hal yang dipersiapkan:
    - network adapter : connector antar node server untuk menjalankan RAC
 
 
-2. Validasi interface network. Memastikan ip public dan private berjalan di atas operasi system
+2. Validasi interface network. Memastikan ip public dan private berjalan di atas operasi system. 
 
    <img width="1044" height="413" alt="Screenshot (882)" src="https://github.com/user-attachments/assets/6507d04e-6fe8-4b11-bbfd-f53f510e4074" />
-   - ens33 : sebagai ip public untuk menghubungkan aplikasi/user dengan database
-   - ens34 : sebagai ip private untuk heartbeat antar node dan sinkronisasi cache data
+   - ens33 : ip public menghubungkan aplikasi/user dengan database
+   - ens34 : ip private untuk heartbeat antar node dan sinkronisasi cache data pada database RAC
 
 
-3. Melakukan konfigurasi Name Resolution lokal /etc/hosts. Memastikan saat instalasi grid infrastucture dan oracle database dapat mengenali hostname server
+3. Melakukan konfigurasi Name Resolution lokal /etc/hosts. Memastikan instalasi grid infrastucture dan oracle database dapat mengenali hostname server
 
    <img width="806" height="405" alt="Screenshot (883)" src="https://github.com/user-attachments/assets/13b7cd0b-d5c1-4ac9-830f-7f8e1f9c3e2b" />
    - Virtual IP : sebagai IP failover, apabila node 1 mati, IP vip akan berpindah ke node yang available
    - SCAN IP    : sebagai side client access name. client cukup mengakses satu nama hostname SCAN IP untuk bisa mengakses seluruh instance di dalam cluster rac
 
 
-4. Melakukan testing connection menggunakan perintah ping ke seluruh hostname (Public, Private, dan VIP) untuk memastikan tidak ada blokade firewall antar node
+4. Melakukan testing connection menggunakan perintah ping ke seluruh hostname (Public, Private, dan VIP). Memastikan tidak ada blokade firewall antar node
 
    <img width="915" height="348" alt="Screenshot (884)" src="https://github.com/user-attachments/assets/b08bde9b-30eb-4421-8ed0-37dc2fcfbc5c" />
 
