@@ -104,27 +104,6 @@ what do i need?
     <img width="842" height="875" alt="Screenshot (1311)" src="https://github.com/user-attachments/assets/c75805cd-f46b-464a-9309-e9ac7992ad6c" />
 
 
-    
-
-    
-
-
-
-
-
-
-
-
-
-
-   
-
-
-
-
-
-
-
 
 
 
