@@ -4,6 +4,7 @@ because the database system needs to configure or switch to new compatabale vers
 why choosing autoupgrades for upgrade database system?
 - automatic detection debug, error, and etc
 - upgrade more 1 database
+- could upgrade from non-cdb to pdb
 - very faster
 - modern method
    
