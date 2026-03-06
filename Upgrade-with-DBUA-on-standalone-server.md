@@ -17,7 +17,7 @@ What do i need:
 - Grid infrastructure 19c for computing on 12c and 19c
 - Oracle database 12c properly running
 - Software Oracle 19c
-- DBUA
+- Database Upgrade Assitant (DBUA)
 
 
 
