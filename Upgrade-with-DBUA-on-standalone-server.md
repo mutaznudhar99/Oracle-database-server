@@ -9,9 +9,15 @@ pros DBUA:
 cons DBUA:
 - upgrade without multiple database
 - very slow between autoupgrade
+- Only upgrade 1 database
 - can't upgrade from non-cdb to pdb
 
-
+What do i need:
+- Standalone server/Oracle restart
+- Grid infrastructure 19c for computing on 12c and 19c
+- Oracle database 12c properly running
+- Software Oracle 19c
+- DBUA
 
 
 
