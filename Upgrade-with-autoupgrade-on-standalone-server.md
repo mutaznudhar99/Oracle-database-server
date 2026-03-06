@@ -22,7 +22,7 @@ what do i need?
    <img width="737" height="125" alt="Screenshot (1257)" src="https://github.com/user-attachments/assets/d8bae02a-fe3c-4d7e-bfd0-0c1ac936e22a" />
 
 
-2. Create direktory autoupgrade for saving file log or anything during autoupgrade
+2. Create direktory autoupgrade for saving file log or anything during autoupgrade based on Optimal Flexible Architecture (OFA)
 
    <img width="644" height="144" alt="Screenshot (1258)" src="https://github.com/user-attachments/assets/a989597c-60e7-4181-9a74-5e92eed3ca59" />
 
