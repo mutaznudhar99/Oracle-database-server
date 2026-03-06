@@ -13,6 +13,8 @@ cons DBUA:
 
 
 
+
+
 1. Ensure old database system running
 
    <img width="729" height="83" alt="Screenshot (1337)" src="https://github.com/user-attachments/assets/6ba71df0-cdcc-4280-aa41-c52ba7581a1b" />
@@ -23,7 +25,7 @@ cons DBUA:
    <img width="1044" height="522" alt="Screenshot (1338)" src="https://github.com/user-attachments/assets/e9a65562-7f8d-414a-8a57-2c36f2a281fa" />
 
 
-3. Create direktory for saving log during preupgrade fixups
+3. Create direktory for saving log during preupgrade fixups based on Optimal Flexible Architecture (OFA)
 
     <img width="620" height="139" alt="Screenshot (1317)" src="https://github.com/user-attachments/assets/e22f12ba-decf-4a80-b1e8-25d41a5bfe5d" />
 
