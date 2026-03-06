@@ -10,9 +10,9 @@ why choosing autoupgrades for upgrade database system?
    
 what do i need?
 - Server standalone/oracle restart
-- grid infrastructure 19c
-- oracle database 12c
-- oracle database 19c
+- grid infrastructure 19c properly running
+- oracle database 12c properly running
+- oracle database 19c properly running
 - autoupgrades tool
 
 
