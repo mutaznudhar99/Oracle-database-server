@@ -1,44 +1,49 @@
-Implementation Data protection using utility RMAN including Point in Time Recovery (PITR) as a Disaster Recovery to back on data before failure system or human error which cause loss data to minimum RPO or RTO on database mission critical
+Implemented a data protection strategy using the RMAN (Recovery Manager) utility, including Point-in-Time Recovery (PITR). This disaster recovery method allows the database to return to a specific state before a system failure or human error occurred, effectively minimizing the Recovery Point Objective (RPO) and Recovery Time Objective (RTO) for mission-critical databases
+
+Key Objectives:
+- Minimize Data Loss: Restore data to the exact second before an incident.
+- Database Integrity: Ensure all datafiles and logs are synchronized during recovery.
+- Flashback Investigation: Use metadata to identify the precise moment of failure.
 
 
 
-1. Verify database instance on mode Archivelog. Archivelog is important as offline redo log to saving data changer on database instance to disaster recovery.
+1. Verified that the database is in ARCHIVELOG mode. This is essential for disaster recovery because it saves the offline redo logs, which record all data changes
 
    <img width="732" height="474" alt="Screenshot (786)" src="https://github.com/user-attachments/assets/af650b48-882c-4c20-858b-38088dc3ebf3" />
 
 
-2. Create sample data and doing COMMIT to ensure data changer writing permanently into Redo segemnts and recording into online redo log on disk level before take     to archive log
+2. Created test data and issued a COMMIT to ensure the changes were permanently written to the redo segments and recorded in the online redo logs
 
    <img width="775" height="566" alt="Screenshot (787)" src="https://github.com/user-attachments/assets/df3002cb-7692-4922-823c-60afa0ccaec7" />
 
 
-3. Execute BACKUP DATABASE PLUS ARCHIVELOG to saving all datafies like (Users, Control Files, Datafiles) and Archivelog as the primary component to disaster          recovery
+3. Executed the BACKUP DATABASE PLUS ARCHIVELOG command to save all critical components, including datafiles, control files, and archivelogs
 
    <img width="1143" height="524" alt="Screenshot (789)" src="https://github.com/user-attachments/assets/2085bc79-5173-4904-96cf-62edc1a8f080" />
    <img width="1165" height="400" alt="Screenshot (790)" src="https://github.com/user-attachments/assets/c78e2f35-1acc-4ba9-a0bd-91115acfaa68" />
 
 
-4. Verify metadata backup to ensure all components database crutial files like datafiles, controlfiles, and archivelogs has been saving and validate status 'AVAILABLE'
+4. Verified the backup status using the RMAN repository to ensure all crucial files are marked as 'AVAILABLE'
 
    <img width="987" height="782" alt="Screenshot (796)" src="https://github.com/user-attachments/assets/25645ac1-2f87-4ba5-8419-8c3ad487cfc4" />
 
 
-5. Doing logical corruption with do data delete
+5. Performed a logical corruption with did manual data delete to accident data loss
 
    <img width="728" height="544" alt="Screenshot (792)" src="https://github.com/user-attachments/assets/9c9aefea-79d4-4dc9-b5c3-40a306cff2ec" />
 
 
-6. Investigate point failure using flashback query statement with last timestamp before insident data loss happens. This important to know last time before data      loss to input on PITR recovery
+6. Investigate failure point used a Flashback Query to identify the exact timestamp before the data loss occurred. This timestamp is critical for an accurate PITR    recovery
 
    <img width="794" height="309" alt="Screenshot (797)" src="https://github.com/user-attachments/assets/55e82bc8-8f85-4d5e-bb43-01bc3b51aacc" />
 
 
-7. Execute PITR with utility RMAN by timestamp last time before data loss to return data before data loss
-   
+7. Execute PITR used the RMAN utility to perform a recovery to the specific timestamp identified in the previous step. This process rolls the database back to its    state just before the incident
+
    <img width="771" height="570" alt="Screenshot (798)" src="https://github.com/user-attachments/assets/c6686aa3-0a28-4b03-a46f-7bce6ce2ebc0" />
 
 
-8. Last verify on transaction table to ensure data is back has been delete and return to the first condition before data loss
+8. Final verified the transaction tables to confirm that the deleted data has been restored and that the database has returned to its original condition
    
    <img width="658" height="199" alt="Screenshot (799)" src="https://github.com/user-attachments/assets/284570a7-6296-4dd0-92f3-ef603400eee0" />
 
