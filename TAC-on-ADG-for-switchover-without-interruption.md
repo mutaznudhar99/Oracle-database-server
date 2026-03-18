@@ -1,4 +1,4 @@
-Implemented Transaction Application Continuity (TAC) on an Oracle Active Data Guard environment. This configuration ensures that database transactions remain uninterrupted during a failover or switchover, providing a seamless experience for the application layer by automatically replaying in-flight transactions on the new primary database
+Implemented Transaction Application Continuity (TAC) on an Oracle Active Data Guard environment. This configuration ensures the database transactions still uninterrupted during a failover or switchover, providing a seamless experience for the application layer by automatically replaying in-flight transactions on the new primary database
 
 
 
