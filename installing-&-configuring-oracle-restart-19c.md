@@ -1,10 +1,10 @@
-Pada sesi kali ini, saya akan melakukan instalasi dan konfigurasi Oracle 19c Grid Infrastructure Standalone Server (oracle restart) pada lingkungan RHEL. Bertujuan untuk mengimplementasi dependency management untuk mengotomatisasi resource lifecycle seperti Oracle ASM, Listener, dan Database. Memastikan ketersediaan layanan yang optimal pada server tunggal
+Demonstrated the installation and configuration of Oracle 19c Grid Infrastructure (Oracle Restart) on a Standalone Server using Red Hat Enterprise Linux (RHEL). The goal is to implement automated resource management for Oracle ASM, the Listener, and the Database to ensure high availability.
 
 
-hal yang dipersiapkan:
-- Infrastructure     : Virtual machine (RHEL compatible)
-- Storage management : Oracle ASM (Automatic Storage Management)
-- Software           : Oracle Grid Infrastructure 19c & Oracle Database 19c
+Prerequisites
+- Infrastructure: Virtual Machine (RHEL/OEL compatible).
+- Storage: Oracle ASM (Automatic Storage Management).
+- Software: Oracle Grid Infrastructure 19c & Oracle Database 19c.
 
 
 
