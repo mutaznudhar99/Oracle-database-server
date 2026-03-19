@@ -4,19 +4,18 @@ Implemented a database upgrade for an Oracle RAC environment, moving from a non-
 Advantages of Autoupgrade:
 - Automated Fixups: Automatically identifies and resolves incompatibilities between versions.
 - Full Automation: Handles the entire workflow: Analyze, Fixups, Deploy, and Upgrade.
-- Modern Standard: Much more efficient and reliable than DBUA or manual scripts.
-- Resilience: Includes a resume feature, allowing the upgrade to continue from where it left off if an interruption occurs.
+- Modern Standard: Efficient and reliable than DBUA or manual scripts.
 - Clean Transition: Automatically shuts down the old database version during the process.
 
 Cons:
-- Java Dependency: Requires a specific Java version to be available on the server.
-- Complex Configuration: The initial configuration file must be precisely defined for RAC environments.
+- Java Dependency: Needs a specific Java version available on the server.
+- Complex Configuration: Configuration files must be customized for a RAC environment.
 
 
 
 
 
-1. Confirmed that the Oracle database processes are running correctly on both RAC nodes
+1. Confirmed the Oracle database processes are running correctly on both RAC nodes
 
    <img width="709" height="99" alt="Screenshot (1359)" src="https://github.com/user-attachments/assets/59d58597-6ef0-4c8e-8fe6-89ceddf34c20" />
 
@@ -27,7 +26,7 @@ Cons:
    <img width="863" height="241" alt="Screenshot (1364)" src="https://github.com/user-attachments/assets/12fdebe4-802c-464d-b320-63fecd5cc939" />
 
 
-3. Confirmed that the 12c instances are active on all nodes before starting the upgrade
+3. Confirmed the 12c instances are active on all nodes before starting the upgrade
 
    <img width="610" height="665" alt="Screenshot (1365)" src="https://github.com/user-attachments/assets/a674153f-5675-4985-9940-e1d8bc6b63a6" />
 
@@ -43,7 +42,7 @@ Cons:
    <img width="809" height="770" alt="Screenshot (1368)" src="https://github.com/user-attachments/assets/db285e52-f15d-47e8-bd85-573a19fafe95" />
 
 
-6. Did purged the RECYCLEBIN and removed unnecessary trace files used sql statements to free up disk space before the upgrade
+6. Performed purged the RECYCLEBIN used sql statements to free up disk space before the upgrade
 
    <img width="767" height="394" alt="Screenshot (1369)" src="https://github.com/user-attachments/assets/d8043dd4-7bf3-4a3b-8cf7-afe0fce9982e" />
 
@@ -53,7 +52,7 @@ Cons:
    <img width="615" height="64" alt="Screenshot (1370)" src="https://github.com/user-attachments/assets/ef289872-1223-4bb0-ad8c-69dfd1bbf971" />
 
 
-8. Created the configuration file (config.cfg) required to transform the non-CDB 12c database into a 19c PDB
+8. Created the configuration file (config.cfg) to transform the non-CDB 12c database into a 19c PDB
 
    <img width="550" height="287" alt="Screenshot (1371)" src="https://github.com/user-attachments/assets/41074cca-7115-451b-a6ac-3e97f23bf25a" />
    <img width="709" height="123" alt="Screenshot (1372)" src="https://github.com/user-attachments/assets/c46c0f31-40ab-4af7-9302-2ac1cdf2e07a" />
@@ -70,13 +69,13 @@ Cons:
     <img width="1001" height="436" alt="Screenshot (1375)" src="https://github.com/user-attachments/assets/79956440-7d3d-42ce-8d75-07c164cb89c3" />
 
 
-11. Executed the DEPLOY mode, which automates the pre-fixups, database upgrade, and post-fixups in one go
+11. Executed the DEPLOY mode, to ran automates the pre-fixups, database upgrade, and post-fixups in one go
 
     <img width="1328" height="515" alt="Screenshot (1386)" src="https://github.com/user-attachments/assets/d910cf62-1c33-41ec-ade6-6cceddc73801" />
     <img width="911" height="444" alt="Screenshot (1387)" src="https://github.com/user-attachments/assets/65f1d8cf-fb46-4331-845a-542f7078a91d" />
 
 
-12. Reviewed the status.html documentation to confirm that all stages (Pre-checks, Upgrade, and Non-CDB to PDB conversion) were successful
+12. Reviewed the status.html documentation to confirm all stages (Pre-checks, Upgrade, and Non-CDB to PDB conversion) were successful
 
     <img width="1594" height="962" alt="Screenshot (1388)" src="https://github.com/user-attachments/assets/3471bd67-7bf9-477b-9cb8-001f01413aa9" />
 
@@ -87,13 +86,13 @@ Cons:
     <img width="704" height="78" alt="Screenshot (1390)" src="https://github.com/user-attachments/assets/ece11303-0f72-4e85-9bfc-51a6e409b3b5" />
 
 
-14. Validated the success of the non-CDB to PDB conversion using SQL*Plus. Confirmed the data is accessible within the new PDB
+14. Validated the success of the non-CDB to PDB conversion using SQL*Plus. Confirmed the data accessible within the new PDB
 
     <img width="733" height="873" alt="Screenshot (1392)" src="https://github.com/user-attachments/assets/22e99794-3b05-4857-ae17-aa1850dc354b" />
     <img width="821" height="876" alt="Screenshot (1393)" src="https://github.com/user-attachments/assets/1352e456-a106-438a-8834-926e196d4b10" />
 
 
-15. Verified that the database services are active and that all datafiles and homes have been correctly updated to the 19c environment
+15. Verified the database services are active and that all datafiles and homes have been correctly updated to the 19c environment
 
     <img width="630" height="657" alt="Screenshot (1394)" src="https://github.com/user-attachments/assets/020ced87-a12a-47f0-ac34-a12ac5bf9ad9" />
 
